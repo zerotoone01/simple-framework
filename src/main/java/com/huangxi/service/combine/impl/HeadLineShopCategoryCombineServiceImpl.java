@@ -25,7 +25,7 @@ public class HeadLineShopCategoryCombineServiceImpl implements HeadLineShopCateg
         //1.获取头条列表 2.获取店铺类别列表 3.合并两者并返回
         HeadLine headLine = new HeadLine();
         headLine.setEnableStatus(1);
-        Result<List<HeadLine>> queryHeadLine = headLineService.queryHeadLine(headLine, 1, 100);
+        Result<List<HeadLine>> queryHeadLine = headLineService.queryHeadLine(headLine, 1, 4);
 
         ShopCategory shopCategory = new ShopCategory();
         Result<List<ShopCategory>> queryShopCategory = shopCategoryService.queryShopCategory(shopCategory, 1, 100);

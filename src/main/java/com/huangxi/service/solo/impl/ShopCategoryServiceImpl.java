@@ -17,7 +17,7 @@ public class ShopCategoryServiceImpl implements ShopCategoryService {
     }
 
     @Override
-    public Result<Boolean> removeShopCategory(ShopCategory shopCategory) {
+    public Result<Boolean> removeShopCategory(int shopCategoryId) {
         return null;
     }
 

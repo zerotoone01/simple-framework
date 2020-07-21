@@ -42,4 +42,10 @@ public class HelloServlet extends HttpServlet {
         req.getRequestDispatcher("/WEB-INF/jsp/hello.jsp").forward(req,resp);
 //        super.doGet(req, resp);
     }
+
+    @Override
+    public void destroy() {
+        System.out.println(" Destroy....");
+//        super.destroy();
+    }
 }

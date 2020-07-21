@@ -1,5 +1,8 @@
 package com.huangxi.controller;
 
+import com.huangxi.consts.ServletPathConst;
+import com.huangxi.controller.frontend.MainPageController;
+import com.huangxi.controller.superadmin.HeadLineOperationController;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,6 +30,15 @@ public class DispatcherServlet extends HttpServlet {
         String reqMethod = req.getMethod();
         LOGGER.debug("servletPath=[{}], reqMethod=[{}]", servletPath,reqMethod);
         LOGGER.info("servletPath=[{}], reqMethod=[{}]", servletPath,reqMethod);
-
+        if(req.getServletPath()== ServletPathConst.SERVLET_PATH_MAIN_PAGE_INFO
+        && req.getMethod().toUpperCase()=="GET"){
+            new MainPageController().getMainPageInfo(req,resp);
+        }else if(req.getServletPath()==ServletPathConst.SERVLET_PATH_SUPER_ADMIN_ADD_HEAD
+        && req.getMethod().toUpperCase()=="POST"){
+            new HeadLineOperationController().addHeadLine(req,resp);
+        }else {
+            //TODO
+            LOGGER.warn("no such request in service!!! method=[{}], path=[{}]",req.getMethod(),req.getServletPath());
+        }
     }
 }
