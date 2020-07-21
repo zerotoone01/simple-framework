@@ -12,6 +12,6 @@
 </head>
 <body>
     <h1>Hello!</h1>
-    <h2>jsp测试</h2>
+    <h2>jsp测试: ${name}</h2>
 </body>
 </html>
