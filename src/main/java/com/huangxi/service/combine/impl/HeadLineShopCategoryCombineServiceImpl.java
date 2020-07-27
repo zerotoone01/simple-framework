@@ -7,6 +7,7 @@ import com.huangxi.entity.dto.Result;
 import com.huangxi.service.combine.HeadLineShopCategoryCombineService;
 import com.huangxi.service.solo.HeadLineService;
 import com.huangxi.service.solo.ShopCategoryService;
+import org.simpleframework.core.annotation.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,6 +17,7 @@ import java.util.List;
  * @description TODO
  * @date 2020-07-21
  */
+@Service
 public class HeadLineShopCategoryCombineServiceImpl implements HeadLineShopCategoryCombineService {
     public static final Logger LOGGER =LoggerFactory.getLogger(HeadLineShopCategoryCombineServiceImpl.class);
     private HeadLineService headLineService;

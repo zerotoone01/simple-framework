@@ -3,6 +3,7 @@ package com.huangxi.service.solo.impl;
 import com.huangxi.entity.bo.ShopCategory;
 import com.huangxi.entity.dto.Result;
 import com.huangxi.service.solo.ShopCategoryService;
+import org.simpleframework.core.annotation.Service;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * @description TODO
  * @date 2020-07-21
  */
+@Service
 public class ShopCategoryServiceImpl implements ShopCategoryService {
     @Override
     public Result<Boolean> addShopCategory(ShopCategory shopCategory) {

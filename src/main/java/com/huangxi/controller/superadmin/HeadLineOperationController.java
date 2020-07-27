@@ -3,6 +3,7 @@ package com.huangxi.controller.superadmin;
 import com.huangxi.entity.bo.HeadLine;
 import com.huangxi.entity.dto.Result;
 import com.huangxi.service.solo.HeadLineService;
+import org.simpleframework.core.annotation.Controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,6 +12,7 @@ import java.util.List;
 /**
  * 操作头条数据
  */
+@Controller
 public class HeadLineOperationController {
     private HeadLineService headLineService;
     //TODO 参数校验以及请求参数转换
