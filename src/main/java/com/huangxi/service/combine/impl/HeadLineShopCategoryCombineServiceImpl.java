@@ -8,6 +8,7 @@ import com.huangxi.service.combine.HeadLineShopCategoryCombineService;
 import com.huangxi.service.solo.HeadLineService;
 import com.huangxi.service.solo.ShopCategoryService;
 import org.simpleframework.core.annotation.Service;
+import org.simpleframework.inject.annotation.Autowired;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,7 +21,9 @@ import java.util.List;
 @Service
 public class HeadLineShopCategoryCombineServiceImpl implements HeadLineShopCategoryCombineService {
     public static final Logger LOGGER =LoggerFactory.getLogger(HeadLineShopCategoryCombineServiceImpl.class);
+    @Autowired
     private HeadLineService headLineService;
+    @Autowired
     private ShopCategoryService shopCategoryService;
     @Override
     public Result<MainPageInfoDTO> getMainPageInfo() {
