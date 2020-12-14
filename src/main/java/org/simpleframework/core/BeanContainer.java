@@ -1,6 +1,7 @@
 package org.simpleframework.core;
 
 
+import org.simpleframework.aop.annotation.Aspect;
 import org.simpleframework.core.annotation.Component;
 import org.simpleframework.core.annotation.Controller;
 import org.simpleframework.core.annotation.Repository;

@@ -8,6 +8,7 @@ public class JdkDynamicProxyUtil {
      *
      * @see Proxy#newProxyInstance(java.lang.ClassLoader, java.lang.Class[], java.lang.reflect.InvocationHandler)
      *
+     *  绑定关系，也就是关联到哪个接口（与具体的实现类绑定）的哪些方法将被调用时，执行invoke方法。
      * @param targetObject 被代理类
      * @param handler
      * @param <T>

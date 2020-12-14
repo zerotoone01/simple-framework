@@ -15,6 +15,17 @@ import java.lang.reflect.Proxy;
  *
  * 用来统一管理横切逻辑Aspect的，真正的代理类是由 Proxy 创建出来的
  * @see InvocationHandler
+ *
+ * 静态代理和动态代理的区别：
+ *
+ * 1.按照代理的创建时期，代理类可以分为两种：
+ *
+ * 静态：由程序员创建代理类或特定工具自动生成源代码再对其编译。在程序运行前代理类的.class文件就已经存在了。
+ *
+ * 动态：在程序运行时运用反射机制动态创建而成。
+ *
+ *
+ *
  */
 public class ProxyDemo {
 

@@ -1,5 +1,7 @@
 package org.simpleframework.aop;
 
+import org.simpleframework.aop.annotation.Aspect;
+import org.simpleframework.aop.annotation.Order;
 import org.simpleframework.aop.aspect.AspectInfo;
 import org.simpleframework.aop.aspect.DefaultAspect;
 import org.simpleframework.core.BeanContainer;
@@ -30,7 +32,7 @@ public class AspectWeaver {
                 categorizeAspect(categorizedMap,aspectClass);
             }else {
                 throw new RuntimeException("@Aspect and @Order have not been added to the Aspect.class, "+
-                        "or Aspect class does not extend from DefaultAspect, or the value in Aspect Tag equals @Aspect")
+                        "or Aspect class does not extend from DefaultAspect, or the value in Aspect Tag equals @Aspect");
             }
         }
 
